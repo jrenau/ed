@@ -1,0 +1,74 @@
+instalar git
+sudo apt-get install git
+
+creamos un repositorio en git hub
+antes si no eres usuario, debes crear uno
+
+clonamos el repositorio github
+    1  git clone https://github.com/jrenau/ed.git
+
+git commit -m "hola mundo desde git "
+git config --global push.default simple
+  git push
+    7  git add .
+    8  git status
+    9  git config --global user.name jrenau
+   10  git config --list
+   11  git config --global user.email dam.jrenau@institutoserpis.org
+   12  git config --list
+   13  pwd
+   14  cd ed
+   15  git config --list
+   16  git commit -m "hola mundo desde git "
+   17  git log
+   18  hola-mundo-git.txt
+   19  git check out 4e8140
+   20  pws
+   21  git pwd
+   22  cd ed
+   23  pwd
+   24  cd_ed/ed
+   25  cd_ed
+   26  cd_ed/home/mati/ed
+   27  cd_ed/ed
+   28  cd_ed
+   29  cd/ed
+   30  cd_ed
+   31  cd/ed
+   32  cd/home/mati/ed
+   33  pwd
+   34  cd/ed
+   35  git pwd
+   36  cd ed
+   37  git log
+   38  hola-mundo-git.txt
+   39  git status
+   40  git push
+   41  git config --global push.default simple
+   42  git config --list
+   43  git push
+   44  git status
+   45  git commit -m "hola mundo desde git "
+   46  git log
+   47  gedit hola-mundo-git.txt
+   48  ls
+   49  git status
+   50  git config --list
+   51  git add .
+   52  git status
+   53  git commit -m "hola mundo desde git"
+   54  git status
+   55  git log
+   56  git push
+   57  cd java
+   58  cd ed
+   59  ed JAVA
+   60  cd JAVA
+   61  javac HolaMundo.java
+   62  java HolaMundo
+   63  cd ed
+   64  git status
+   65  ls
+   66  gedit diario.txt
+   67  gedit diario.txt &
+   68  history > diario.txt &

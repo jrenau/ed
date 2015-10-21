@@ -16,7 +16,7 @@ public class Array {
 		System.out.println("suma del array vacio= " + suma(new int[]{}));
 	}
 	
-	private static int suma(int[] v){
+	public static int suma(int[] v){
 		//número de elementos del vector: v.length
 		int suma = 0;
 		
@@ -28,13 +28,13 @@ public class Array {
 		
 		return suma;
 	}
-	private static int menor(int[] v){
+	public static int menor(int[] v){
 		//TODO implemetar
 		int menor = v[0];
 		System.out.println("El valor menor de v es: " + menor(v));
 		return 0;
 	}
-	private static int indexOf(int[] v, int item) {
+public static int indexOf(int[] v, int item) {
 		//TODO implemetar
 		System.out.println(" " + menor(v));
 		return item; 

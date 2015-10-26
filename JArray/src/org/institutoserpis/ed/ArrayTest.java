@@ -15,8 +15,11 @@ public class ArrayTest {
 	}
 
 	@Test
-	public void testIndexOf() {
-		fail("Not yet implemented");
+	public void IndexOf() {
+		assertEquals(0, Array.indexOf(new int[]{7,21,9,13},7));
+		assertEquals(1, Array.indexOf(new int[]{7,21,9,13},21));
+		assertEquals(3, Array.indexOf(new int[]{7,21,9,13},13));
+		assertEquals(-1, Array.indexOf(new int[]{7,21,9,13},21));
 	}
 
 }

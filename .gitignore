@@ -13,3 +13,8 @@ hs_err_pid*
 
 #gedit backups
 *~
+
+# c# monodevelop
+*.exe
+*.exe.mdb
+*.userprefs

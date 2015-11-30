@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSumaGtk", "PSumaGtk\PSumaGtk.csproj", "{AE2D8D1F-25A5-45F6-9C5C-502480F3B17B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE2D8D1F-25A5-45F6-9C5C-502480F3B17B}.Debug|x86.ActiveCfg = Debug|x86
+		{AE2D8D1F-25A5-45F6-9C5C-502480F3B17B}.Debug|x86.Build.0 = Debug|x86
+		{AE2D8D1F-25A5-45F6-9C5C-502480F3B17B}.Release|x86.ActiveCfg = Release|x86
+		{AE2D8D1F-25A5-45F6-9C5C-502480F3B17B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PSumaGtk\PSumaGtk.csproj
+	EndGlobalSection
+EndGlobal

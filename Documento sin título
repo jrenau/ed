@@ -1,0 +1,11 @@
+public class PruebaCategoria {
+
+	public static void main(String [] args) throws SQLException {
+		System.out.println("GMySql inicio");
+
+		Connection connection = DriverManager .getConnection(
+			"jdbc:mysql://localhost/dbprueba",
+			"root",
+			"sistemas"
+		);
+

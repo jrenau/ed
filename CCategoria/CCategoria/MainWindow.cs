@@ -1,8 +1,7 @@
-using System;
+using CCategoria;
 using Gtk;
+using System;
 using System.Data;
-using MySql.Data.MySqlClient;
-
 
 public partial class MainWindow: Gtk.Window
 {	
@@ -16,28 +15,30 @@ public partial class MainWindow: Gtk.Window
 		ListStore listStore = new ListStore (typeof(long), typeof(string));
 		treeView.Model = listStore;
 
+		fillListStore (listStore);
 
+		deleteAction.Sensitive = false;
 
-		IDbConnection dbConnection = new MySqlConnection(
-			"Database=dbprueba;User=root;Password=sistemas");
-		dbConnection.Open ();
+		newAction.Activated += delegate {
+			new CategoriaView();
+	};
+		deleteAction.Activated += delegate {
+			MessageDialog messageDialog = new MessageDialog(
+				this,
+				DialogFlags.Modal,
+				MessageType.Question,
+				ButtonsType
+	};
 
-		//las operaciones que toquen
+	}
 
-		IDbCommand insertDbCommand = dbConnection.CreateCommand ();
-		insertDbCommand.CommandText = 
-			"insert into categoria (nombre) values ('categoria 4')";
-		insertDbCommand.ExecuteNonQuery ();
-
-		IDbCommand dbCommand = dbConnection.CreateCommand ();
-		dbCommand.CommandText = "select * from categoria";
+	private void fillListStore (ListStore listStore) {
+		IDbCommand dbCommand = App.Instace.DbConnection.CreateCommand ();
+		dbCommand.CommandText = "select * from categoria order by id";
 		IDataReader dataReader = dbCommand.ExecuteReader ();
 		while (dataReader.Read())
-			listStore.AppendValues(dataReader ["id"], dataReader ["nombre"]);
-			//Console.WriteLine ("id={0} nombre={1} ", dataReader ["id"], dataReader ["nombre"]);
-		dataReader.Close();
-
-		dbConnection.Close ();
+			listStore.AppendValues (dataReader ["id"], dataReader ["nombre"]);
+		dataReader.Close ();
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)

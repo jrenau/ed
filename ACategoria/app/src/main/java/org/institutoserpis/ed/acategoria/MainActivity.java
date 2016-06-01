@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -12,11 +14,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DbPruebaHelper.init(this);
+        //    DbPruebaHelper.getInstance().insertCategoria("categoria 1");
+        //    DbPruebaHelper.getInstance().insertCategoria("categoria 2");
+        //    DbPruebaHelper.getInstance().insertCategoria("categoria 3");
+        List<Categoria> categorias = DbPruebaHelper.getInstance().getCategoria();
+
         ListView listView = (ListView) findViewById(R.id.listView);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_expandable_list_item_1,
-                new String[] {"Uno", "Dos"}
+                categorias;
         );
         listView.setAdapter(arrayAdapter);
                     }
